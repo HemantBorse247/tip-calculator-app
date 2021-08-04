@@ -1,0 +1,262 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
+/* variables */
+:root {
+  --Strong-cyan: hsl(172, 67%, 45%);
+  --Very-dark-cyan: hsl(183, 100%, 15%);
+  --more-Dark-grayish-cyan: hsl(186, 14%, 43%);
+  --Dark-grayish-cyan: hsl(184, 14%, 56%);
+  --Light-grayish-cyan: hsl(185, 41%, 84%);
+  --extra-Light-grayish-cyan: hsl(189, 41%, 97%);
+  --White: hsl(0, 0%, 100%);
+  --light-strong-cyan: hsl(173, 61%, 77%);
+
+  --font-label: "Space Mono", monospace;
+  font-family: "Space Mono", monospace;
+}
+
+/* css reset */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Space Mono", monospace;
+}
+
+body {
+  background-color: var(--Light-grayish-cyan);
+}
+
+/* helper classes */
+
+.label-style {
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+  color: var(--more-Dark-grayish-cyan);
+  margin: 8px 8px;
+  margin-top: 0px;
+  font-size: 14px;
+}
+
+/*actual css starts here*/
+
+.logo-container {
+  display: block;
+  width: 90px;
+  margin: 40px auto;
+}
+
+.main-app {
+  background-color: var(--White);
+  background-color: var(--White);
+  border-radius: 20px;
+  min-height: 760px;
+  padding: 24px;
+}
+
+.amount-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.amount-input {
+  display: block;
+  margin: 2px auto;
+  width: 312px;
+  height: 42px;
+  padding: 12px;
+  text-align: right;
+  border: 2px solid var(--extra-Light-grayish-cyan);
+  border-radius: 4px;
+  border-style: none;
+  background-color: var(--extra-Light-grayish-cyan);
+  color: var(--Very-dark-cyan);
+  font-size: 24px;
+  font-family: var(--font-label);
+  font-weight: 700;
+  transition: all 200ms ease-in-out;
+}
+
+input:focus {
+  outline: 2px solid var(--Strong-cyan);
+}
+
+/*.amount-section*/
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  /* display: none; <- Crashes Chrome on hover */
+  -webkit-appearance: none;
+  margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+input[type="number"] {
+  -moz-appearance: textfield; /* Firefox */
+}
+
+/* tip section */
+
+.tip-section {
+  /* border: 2px solid green; */
+  display: flex;
+  flex-direction: column;
+  width: 312px;
+  margin: 30px auto;
+}
+
+.tip-section span {
+  margin-bottom: 20px;
+  margin-left: 0px;
+}
+
+.tip-selector-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.btn {
+  width: 146px;
+  height: 48px;
+  border-radius: 4px;
+  background-color: var(--Very-dark-cyan);
+  text-align: center;
+  font-family: var(--font-label);
+  color: var(--White);
+  font-weight: 700;
+  font-size: 24px;
+  border-style: none;
+  transition: all 200ms ease-in-out;
+}
+
+.btn:hover {
+  background-color: var(--light-strong-cyan);
+  color: var(--Very-dark-cyan);
+}
+.btn:focus {
+  background-color: var(--Strong-cyan);
+  color: var(--Very-dark-cyan);
+}
+
+#tip-button-ctm {
+  width: 146px;
+  height: 48px;
+  font-weight: 700;
+  font-size: 24px;
+  border-radius: 4px;
+  background-color: var(--extra-Light-grayish-cyan);
+  color: var(--more-Dark-grayish-cyan);
+  text-align: right;
+  padding: 0px 20px;
+  border: 2px solid var(--extra-Light-grayish-cyan);
+  transition: all 200ms ease-in-out;
+}
+
+/* number of people section */
+
+.split-amount-selector {
+  margin: 20px 0px;
+  height: 75px;
+}
+
+/* final detail display section */
+
+.final-form {
+  display: flex;
+  flex-direction: column;
+  margin: 0px auto;
+  max-width: 270px;
+  row-gap: 20px;
+  gap: 20px;
+  height: 166px;
+}
+
+.final-detail-display {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--Very-dark-cyan);
+  max-width: 330px;
+  min-width: 325px;
+  height: auto;
+  min-height: 235px;
+  padding: 24px;
+  padding-top: 34px;
+  border-radius: 12px;
+  justify-content: center;
+}
+
+.tip-amount {
+  display: flex;
+  flex-direction: row;
+}
+
+.per-person-amount {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 10px;
+}
+
+.final-detail-labels {
+  width: 110px;
+  /* border: 2px solid red; */
+  color: var(--White);
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.final-detail-span {
+  font-weight: 400;
+  color: var(--extra-Light-grayish-cyan);
+  font-size: 10px;
+  opacity: 0.4;
+  margin: 0px;
+  font-weight: 700;
+}
+
+.final-detail-amount-input {
+  background: none;
+  /* border: 2px solid blue; */
+  border-style: none;
+  text-align: right;
+  padding-right: 2px;
+  font-size: 24px;
+  font-weight: 700;
+  font-family: var(--font-label);
+  max-width: 160px;
+  width: 100%;
+  color: var(--Strong-cyan);
+}
+
+.label-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.final-form input:focus {
+  outline: none;
+}
+
+.reset-btn {
+  display: block;
+  width: 270px;
+  height: 44px;
+  margin: 0px auto;
+  border: none;
+  border-radius: 4px;
+  background-color: var(--Strong-cyan);
+  font-family: var(--font-label);
+  font-size: 18px;
+  font-weight: 700;
+  opacity: 0.2;
+}
+/* footer css */
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
