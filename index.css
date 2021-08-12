@@ -33,7 +33,6 @@ body {
   font-family: "Space Mono", monospace;
   font-weight: 700;
   color: var(--more-Dark-grayish-cyan);
-  margin: 8px 8px;
   margin-top: 0px;
   font-size: 14px;
 }
@@ -48,22 +47,22 @@ body {
 
 .main-app {
   background-color: var(--White);
-  background-color: var(--White);
+  /* background-color: greenyellow; */
   border-radius: 20px;
-  min-height: 760px;
-  padding: 24px;
 }
 
 .amount-section {
   display: flex;
   flex-direction: column;
+  padding: 32px;
+  width: 100%;
 }
 
 .amount-input {
   display: block;
   margin: 2px auto;
-  width: 312px;
-  height: 42px;
+  width: 100%;
+  height: 40px;
   padding: 12px;
   text-align: right;
   border: 2px solid var(--extra-Light-grayish-cyan);
@@ -79,6 +78,7 @@ body {
 
 input:focus {
   outline: 2px solid var(--Strong-cyan);
+  border-radius: 4px;
 }
 
 /*.amount-section*/
@@ -97,22 +97,23 @@ input[type="number"] {
 /* tip section */
 
 .tip-section {
-  /* border: 2px solid green; */
   display: flex;
   flex-direction: column;
-  width: 312px;
-  margin: 30px auto;
+  padding: 32px;
+  padding-top: 0px;
+  width: 100%;
 }
 
 .tip-section span {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   margin-left: 0px;
 }
 
 .tip-selector-section {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 16px;
+  justify-content: flex-start;
 }
 
 .btn {
@@ -142,7 +143,7 @@ input[type="number"] {
   width: 146px;
   height: 48px;
   font-weight: 700;
-  font-size: 24px;
+  font-size: 20px;
   border-radius: 4px;
   background-color: var(--extra-Light-grayish-cyan);
   color: var(--more-Dark-grayish-cyan);
@@ -155,8 +156,10 @@ input[type="number"] {
 /* number of people section */
 
 .split-amount-selector {
-  margin: 20px 0px;
-  height: 75px;
+  display: flex;
+  flex-direction: column;
+  padding: 32px;
+  padding-top: 0px;
 }
 
 /* final detail display section */
@@ -164,11 +167,9 @@ input[type="number"] {
 .final-form {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  width: 100%;
   margin: 0px auto;
-  max-width: 270px;
-  row-gap: 20px;
-  gap: 20px;
-  height: 166px;
 }
 
 .final-detail-display {
@@ -176,10 +177,8 @@ input[type="number"] {
   flex-direction: column;
   align-items: center;
   background-color: var(--Very-dark-cyan);
-  max-width: 330px;
-  min-width: 325px;
   height: auto;
-  min-height: 235px;
+  margin: 24px;
   padding: 24px;
   padding-top: 34px;
   border-radius: 12px;
@@ -189,12 +188,17 @@ input[type="number"] {
 .tip-amount {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 25px;
 }
 
 .per-person-amount {
   display: flex;
   flex-direction: row;
-  margin-bottom: 10px;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 35px;
 }
 
 .final-detail-labels {
@@ -239,8 +243,8 @@ input[type="number"] {
 
 .reset-btn {
   display: block;
-  width: 270px;
-  height: 44px;
+  width: 100%;
+  height: 48px;
   margin: 0px auto;
   border: none;
   border-radius: 4px;
@@ -259,4 +263,74 @@ input[type="number"] {
 
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+/* media queries */
+
+@media only screen and (min-width: 760px) {
+  body {
+    padding: 0px 200px;
+  }
+
+  .main-app {
+    display: flex;
+    width: 100%;
+  }
+
+  form{
+    min-width: 880px;
+  }
+
+  .amount-section {
+    margin-bottom: 30px;
+  }
+
+  .tip-section {
+    margin-bottom: 30px;
+  }
+
+  .form {
+    display: flex;
+  }
+
+  .tip-selector-section {
+    /* justify-content: space-between; */
+  }
+
+  .info-section {
+    flex-basis: 100%;
+    padding: 32px;
+  }
+
+  .info-section > * {
+    padding: 0px;
+  }
+
+  .info-section input {
+    height: 48px;
+  }
+
+  .btn {
+    max-width: 115px;
+    height: 48px;
+  }
+
+  #tip-button-ctm {
+    width: 115px;
+    height: 48px;
+    padding-right: 8px;
+  }
+
+  .final-detail-display {
+    flex-basis: 90%;
+    margin: 24px;
+    margin-left: 0px;
+    padding: 50px 40px;
+    padding-bottom: 0px;
+    justify-content: flex-start;
+  }
+
+  .final-detail-display input {
+    font-size: 36px;
+  }
 }
