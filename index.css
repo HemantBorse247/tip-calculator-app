@@ -272,13 +272,10 @@ input[type="number"] {
     padding: 0px 200px;
   }
 
-  .main-app {
+  .form {
     display: flex;
+    flex-direction: row;
     width: 100%;
-  }
-
-  form {
-    min-width: 880px;
   }
 
   .amount-section {
@@ -291,6 +288,7 @@ input[type="number"] {
 
   .form {
     display: flex;
+    min-width: 880px;
   }
 
   .info-section {
