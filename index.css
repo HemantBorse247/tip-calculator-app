@@ -277,7 +277,7 @@ input[type="number"] {
     width: 100%;
   }
 
-  form{
+  form {
     min-width: 880px;
   }
 
@@ -291,10 +291,6 @@ input[type="number"] {
 
   .form {
     display: flex;
-  }
-
-  .tip-selector-section {
-    /* justify-content: space-between; */
   }
 
   .info-section {
